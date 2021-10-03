@@ -1,0 +1,61 @@
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <cmath>
+#include <climits>
+
+int main()
+{
+    double x;
+    double y;
+    double hits = 0;
+    double misses = 0;
+    //std::cout << RAND_MAX;
+
+    int amountLost = 0;
+    int budget = 1500;
+    int amountOfZeros = 2;
+    int initialWager = 10;
+    int wager = initialWager;
+
+    for (unsigned int i = 0; budget > 0 && i<10000; i++)
+    {
+        std::cout << ((double)rand() / RAND_MAX * (36.00 + amountOfZeros));
+        if (((double)rand() / RAND_MAX * (36.00 + amountOfZeros)) <= 18.00)
+        {
+            //user won
+            budget += wager;
+        }
+        else
+        {
+            budget -= wager;
+            wager = wager*2;
+        }
+        std::cout << "Budget: ";
+        std::cout << budget;
+        std::cout << "\n";
+    }
+
+    // for (unsigned long long int i = 0; i < ULLONG_MAX; i++)
+    // {
+    //
+    //     x = (double)rand() / RAND_MAX;
+    //     y = (double)rand() / RAND_MAX;
+
+    //     float a = pow(x, 2);
+    //     float b = pow(y, 2);
+    //     // float c = a + b;
+
+    //     if (a+b > 1)
+    //     {
+    //         misses++;
+    //     }
+    //     else
+    //     {
+    //         hits++;
+    //     }
+    // }
+    // std::cout << hits / misses;
+    // std::cout << "\n";
+    // }
+}
