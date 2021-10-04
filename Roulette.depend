@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1633293034 source:c:\users\silva\dev\schule\math\roulette\roulette\main.cpp
+1633376128 source:c:\users\silva\dev\schule\math\roulette\roulette\main.cpp
 	<iostream>
 	<string>
 	<math.h>
 	<cmath>
 	<climits>
 	<time.h>
+	<random>
 
