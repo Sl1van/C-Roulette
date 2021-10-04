@@ -7,7 +7,8 @@
 #include <random>
 using namespace std;
 
-int calcWinnings(int amountOfZeros, int budget, int initialWager){
+int calcWinnings(int amountOfZeros, int budget, int initialWager)
+{
     int wager = initialWager;
     int initalBudget = budget;
 
@@ -23,7 +24,8 @@ int calcWinnings(int amountOfZeros, int budget, int initialWager){
 
     for (unsigned int i = 0; i<1000; i++)
     {
-        if(budget-wager<0 ){
+        if(budget-wager<0 )
+        {
             break;
         }
         int winningNumber = dis(gen);
@@ -56,7 +58,8 @@ int main()
     std::cout  << "dataSetSize: " << dataSetSize << ", amountOfZeros: " << amountOfZeros << ", budget: " <<budget << ", initialWager: " << initialWager << "\n";
 
     int winnings = 0;
-    for(int i = 0; i<dataSetSize;i++){
+    for(int i = 0; i<dataSetSize; i++)
+    {
         int currentWinnings = calcWinnings(amountOfZeros, budget, initialWager);
         winnings += currentWinnings;
     }
